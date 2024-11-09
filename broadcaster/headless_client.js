@@ -19,7 +19,7 @@ async function stream(url, token) {
   });
 
   const pc = new RTCPeerConnection({
-    iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
+    iceServers: [{ urls: 'turn:gcp-europe-central2.stunner.cc:3478?transport=udp', username: 'user-1', credential: 'pass-1', iceTransportPolicy: 'relay'}]
   });
   pc.onconnectionstatechange = async (_) => {
     console.log("Connection state changed:", pc.connectionState);

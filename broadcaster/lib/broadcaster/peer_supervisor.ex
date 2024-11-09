@@ -25,7 +25,7 @@ defmodule Broadcaster.PeerSupervisor do
   ]
 
   @opts [
-    ice_servers: [%{urls: "stun:stun.l.google.com:19302"}],
+    ice_servers: [%{urls: "turn:gcp-europe-central2.stunner.cc:3478?transport=udp", "username": "user-1", "credential": "pass-1", "iceTransportPolicy": "relay"}],
     audio_codecs: @audio_codecs,
     video_codecs: @video_codecs
   ]

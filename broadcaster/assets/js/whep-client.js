@@ -1,4 +1,4 @@
-const pcConfig = { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] };
+const pcConfig = { iceServers: [{ urls: 'turn:gcp-europe-central2.stunner.cc:3478?transport=udp', username: 'user-1', credential: 'pass-1', iceTransportPolicy: 'relay'}] };
 
 export class WHEPClient {
   constructor(url) {
